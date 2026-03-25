@@ -21,9 +21,22 @@ The dataset used for this project is a transaction dataset in CSV format.
 - XGBoost
 - Jupyter Notebook
 
-## Models
+## Project Structure
+- `data/raw/` → raw dataset
+- `notebooks/` → notebook files
+- `src/` → Python scripts
+- `outputs/` → figures and saved models
+## Models Used
 - Random Forest
 - XGBoost
+
+## Workflow
+- Data loading and inspection
+- Exploratory data analysis
+- Train/test split
+- Model training
+- Model evaluation
+- Model comparison
 
 ## Evaluation Metrics
 - Precision
@@ -31,12 +44,15 @@ The dataset used for this project is a transaction dataset in CSV format.
 - F1-score
 - ROC-AUC
 - PR-AUC
+## RESULTS
+| Model | ROC-AUC | PR-AUC |
+|------|--------:|-------:|
+| Random Forest | 0.9529 | 0.8542 |
+| XGBoost | 0.9770 | 0.8653 |
 
-## Project Structure
-- `data/raw/` → raw dataset
-- `notebooks/` → notebook files
-- `src/` → Python scripts
-- `outputs/` → figures and saved models
+## Conclusion
+Both models performed well, but XGBoost achieved the highest ROC-AUC and PR-AUC scores. Since fraud detection involves highly imbalanced data, PR-AUC is especially important. Based on these results, XGBoost was the best model for this project
+
 
 ## Future Improvements
 - Hyperparameter tuning
